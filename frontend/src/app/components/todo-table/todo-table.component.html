@@ -1,0 +1,15 @@
+<div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-52">
+  <app-todo-item
+    *ngFor="let todo of todoList"
+    [todo]="todo"
+    (onUpdateTodo)="onUpdateTodoItem(todo._id)"
+    (onDeleteTodo)="onDeleteTodoItem(todo._id)"
+  />
+  <!-- <div class="relative">
+    <div class="absolute z-20 bg-blue-500 p-2">I'm on top!</div>
+    <div class="absolute top-6 z-10 bg-red-500 p-2">I'm in the middle!</div>
+    <div class="absolute left-8 top-2 z-0 bg-green-500 p-2">
+      I'm at the bottom!
+    </div>
+  </div> -->
+</div>
